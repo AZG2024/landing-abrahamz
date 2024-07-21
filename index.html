@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- or -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Rubik", sans-serif;
+        background-color: #f2f2f2;
+      }
+      .cabecera {
+        display: flex;
+        flex-direction: column;
+      }
+      .cabecera-contenido {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 1.5em;
+      }
+      .enlaces {
+        font-size: 13px;
+      }
+      .enlaces:hover {
+        cursor: pointer;
+        color: #fa5959;
+      }
+      .boton {
+        background-color: #fa5959;
+        color: white !important;
+        padding: 1em 2.9em;
+        border-radius: 10px;
+
+        font-size: 13px;
+      }
+      .contenido-principal {
+        width: 85%;
+        margin: 0 auto;
+      }
+      .banner1 {
+        display: flex;
+        margin-top: 4em;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+      }
+      .caja1-banner1 {
+        margin-bottom: 4em;
+      }
+      .titulo {
+        color: #242a45;
+        font-size: 48px;
+      }
+      .parrafo-banner1 {
+        font-size: 18px;
+        color: grey;
+      }
+      .boton1 {
+        background-color: #5267df;
+        color: white;
+        padding: 1em 2em;
+        border: none;
+        border-radius: 10px;
+      }
+      .boton2 {
+        background-color: #f7f7f7;
+        color: #242a45;
+        padding: 1em 2em;
+        margin-left: 1.5em;
+        border: none;
+        border-radius: 5px;
+      }
+      .boton2:hover {
+        cursor: pointer;
+      }
+      .boton1:hover {
+        cursor: pointer;
+      }
+      /*Bookmarks*/
+      .bookmarks {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .caja-bookmarks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .lista-bookmarks {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 8em;
+        margin-top: 2em;
+        margin-left: -5em;
+      }
+      .titulo-bookmarks {
+        color: #242a45;
+        text-align: center;
+        margin-right: 1em;
+      }
+      .hacermargin {
+        position: relative;
+        right: -7em;
+      }
+      .parrafo-bookmarks {
+        color: grey;
+        text-align: center;
+        width: 35%;
+      }
+      .seleccion {
+        padding-bottom: 1em;
+        border-bottom: grey 2px solid;
+      }
+      .seleccion:hover {
+        padding-bottom: 1em;
+        border-bottom: #fa5959 2px solid;
+        color: #fa5959;
+      }
+      /*banner-bookmark*/
+      .banner-bookmark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .contenidosoverflow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        margin-top: 2.5em;
+      }
+      .contenido-bookmark-titulos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-bottom: 5.5em;
+      }
+      .bookmar-oneclick {
+        font-size: 32px;
+      }
+      .segundobook {
+        width: 60%;
+        align-self: self-start;
+        color: grey;
+      }
+      .botonabajo {
+        margin-top: 1em;
+      }
+      /*Extensiones*/
+
+      .titulo-extensiones {
+        text-align: center;
+        color: #242a45;
+        font-size: 32px;
+      }
+      .parrafo-extensiones {
+        width: 35%;
+        color: grey;
+        margin: 0 auto;
+        padding-bottom: 2em;
+      }
+      .cajas-extensiones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+
+        margin-top: 1.5em;
+      }
+      .ext {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background-color: white;
+
+        text-align: center;
+        /* Borde sólido de 2px, ajusta el color si es necesario */
+        box-shadow: 0 0 8px 2px rgba(128, 128, 128, 0.6);
+      }
+
+      .titulo-chrome {
+        color: #242a45;
+        background-color: white;
+      }
+      .contenido-extensiones {
+        position: relative;
+      }
+      .parrafo-chrome {
+        color: grey;
+        background-color: white;
+      }
+
+      .ext img {
+        width: 35%;
+        margin: 0 auto;
+        background-color: white;
+      }
+      .boton-chrome {
+        width: 90%;
+        margin: 0 auto;
+        border: none;
+        background-color: #5267df;
+        color: white;
+        padding: 1em 2em;
+        border-radius: 10px;
+        margin-top: 4em;
+      }
+      .uno {
+        padding: 4em 0;
+      }
+      .dos {
+        padding: 4em 0;
+        position: relative;
+        top: 2em;
+      }
+      .tres {
+        padding: 4em 0;
+        position: relative;
+        top: 3.5em;
+      }
+      .tres img {
+        width: 32%;
+      }
+      /*Responsive*/
+      .responsive {
+        display: none;
+
+        flex-direction: column;
+        gap: 1em;
+        background: #f9f9f9;
+        padding: 20px;
+        position: fixed; /* Posicionamiento fijo */
+        top: 0; /* Empieza en la parte superior de la página */
+        left: 0; /* Empieza en el lado izquierdo de la página */
+        width: 100%; /* Ancho completo */
+        height: 100vh; /* Alto completo */
+        box-sizing: border-box;
+        z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+        gap: 3em;
+        background-color: #242a45;
+      }
+      .responsive li {
+        background-color: #242a45;
+        color: white;
+        margin-top: 2em;
+        text-align: center;
+        list-style: none;
+      }
+
+      .responsive li:hover {
+        list-style: none;
+        cursor: pointer;
+        color: #fa5959;
+      }
+      .hamburguesa {
+        display: none;
+      }
+      @media (max-width: 1100px) {
+        .banner1 {
+          flex-direction: column-reverse;
+          margin-top: -0.5em;
+        }
+        .imagen {
+          margin-top: 1.5em;
+        }
+        .imagen img {
+          width: 95%;
+        }
+        .caja1-banner1 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2em;
+        }
+        .boton2 {
+          margin-top: 1em;
+          margin-right: 1.2em;
+          display: inline-block;
+        }
+        .parrafo-bookmarks {
+          width: 100%;
+        }
+        .contenidosoverflow {
+          display: flex;
+          flex-direction: column;
+        }
+        .contenido-bookmark {
+          width: 100%;
+        }
+        .contenido-bookmark img {
+          width: 100%;
+        }
+        .contenido-bookmark-titulos {
+          position: relative;
+          bottom: 4em;
+        }
+        .bookmar-oneclick {
+          margin: 0 auto;
+        }
+        .segundobook {
+          margin: 0 auto;
+          margin-top: 1.5em;
+        }
+        .botonabajo {
+          margin: 0 auto;
+          margin-top: 1.5em;
+        }
+        .contenido-bookmark .share {
+          width: 70%;
+          text-align: center;
+        }
+        .mover {
+          margin-right: 12.5em;
+          margin-top: 2em;
+        }
+        p.segundobook {
+          width: 100%;
+        }
+      }
+      @media (max-width: 431px) {
+        .titulo {
+          text-align: center;
+          font-size: 1.5em;
+          margin-top: -1.2em;
+        }
+        .parrafo-banner1 {
+          margin-top: -1.5em;
+          text-align: center;
+        }
+        .boton1,
+        .boton2 {
+          margin-top: -1em;
+        }
+        .bookmarks {
+          margin-top: -1.5em;
+        }
+        .lista-bookmarks {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .active {
+          margin-right: -1em;
+        }
+        .subirmargin {
+          margin-top: -5em;
+          width: 100%;
+          text-align: center;
+          margin-right: -1em;
+        }
+        .subirmargin2 {
+          margin-top: -5em;
+          width: 100%;
+          text-align: center;
+          margin-right: -1em;
+        }
+        h2.bookmar-oneclick {
+          text-align: center;
+          font-size: 1.5em;
+        }
+        .botonabajo {
+          margin-top: 2em;
+        }
+        .contenido-bookmark-titulos {
+          width: 100%;
+        }
+        .hacermargin img {
+          width: 50%;
+          margin-left: -1.5em;
+        }
+        p.segundobook {
+          text-align: center !important;
+          width: 100% !important;
+        }
+        .contenido-bookmark {
+          width: 100%;
+        }
+        img.share {
+          width: 120%;
+        }
+        img.search {
+          width: 100%;
+          margin: 0 auto;
+          margin-left: -6em;
+        }
+        .titulotres {
+          margin-top: 1.5em;
+          text-align: center;
+        }
+        .cajanumerotres {
+          margin-left: -15em;
+        }
+        .extensiones {
+          margin-top: -6em;
+        }
+        .extensiones p {
+          width: 100%;
+          text-align: center;
+        }
+        .cajas-extensiones {
+          flex-direction: column;
+        }
+        .cajapreguntauno {
+          width: 100%;
+        }
+        .enlaces {
+          display: none;
+        }
+        .hamburguesa {
+          display: block;
+        }
+      }
+    </style>
+
+    <header class="cabecera">
+      <div class="cabecera-contenido">
+        <img src="./images/logo-bookmark.svg" />
+        <nav class="logoymenu">
+          <ul class="menu">
+            <li class="enlaces">FEATURES</li>
+            <li class="enlaces">PRICING</li>
+            <li class="enlaces">CONTACT</li>
+            <li class="enlaces boton">LOGIN</li>
+            <i class="bx bx-menu hamburguesa"></i>
+          </ul>
+        </nav>
+      </div>
+      <div class="responsive">
+        <li class="cerrar">X</li>
+        <li>FEATURES</li>
+        <li>PRICING</li>
+        <li>CONTACT</li>
+        <li>LOGIN</li>
+      </div>
+    </header>
+    <main class="contenido-principal">
+      <section class="banner1">
+        <div class="caja1-banner1">
+          <h1 class="titulo">A Simple Bookmark Manager</h1>
+          <p class="parrafo-banner1">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <button class="boton1">Get it on Chrome</button>
+          <button class="boton2">Get it on Firefox</button>
+        </div>
+        <div class="imagen">
+          <img src="./images/illustration-hero.svg" />
+        </div>
+      </section>
+      <section class="bookmarks">
+        <div class="caja-bookmarks">
+          <h2 class="titulo-bookmars">Features</h2>
+          <p class="parrafo-bookmarks">
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+          <ul class="lista-bookmarks">
+            <li class="seleccion active" data-tab="0">Simple Bookmarking</li>
+            <li class="seleccion subirmargin" data-tab="1">Speedy Searching</li>
+            <li class="seleccion subirmargin2" data-tab="2">Easy Sharing</li>
+          </ul>
+        </div>
+      </section>
+      <style>
+        .contenidosoverflow {
+          display: none; /* Oculta todos los contenidos inicialmente */
+        }
+
+        .contenidosoverflow.active {
+          display: flex; /* Solo muestra el contenido activo */
+        }
+      </style>
+      <section class="banner-bookmark">
+        <div class="contenidosoverflow">
+          <div class="contenido-bookmark">
+            <img src="./images/illustration-hero.svg" />
+          </div>
+          <div class="contenido-bookmark-titulos">
+            <h2 class="bookmar-oneclick">Bookmark in one click</h2>
+            <p class="segundobook">
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button class="boton1 botonabajo">More Info</button>
+          </div>
+        </div>
+        <div class="contenidosoverflow hacermargin">
+          <div class="contenido-bookmark">
+            <img class="share" src="./images/illustration-features-tab-2.svg" />
+          </div>
+          <div class="contenido-bookmark-titulos mover">
+            <h2 class="bookmar-oneclick">Share Your Bookmarks</h2>
+            <p class="segundobook">
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button class="boton1 botonabajo">More Info</button>
+          </div>
+        </div>
+        <div class="contenidosoverflow hacermargin">
+          <div class="contenido-bookmark">
+            <img
+              class="search"
+              src="./images/illustration-features-tab-1.svg"
+            />
+          </div>
+          <div class="contenido-bookmark-titulos cajanumerotres">
+            <h2 class="bookmar-oneclick titulotres">Intelligent Search</h2>
+            <p class="segundobook">
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button class="boton1 botonabajo">More Info</button>
+          </div>
+        </div>
+      </section>
+      <secion class="extensiones">
+        <div class="contenido-extensiones">
+          <h3 class="titulo-extensiones">Download the extensions</h3>
+          <p class="parrafo-extensiones">
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+          <div class="cajas-extensiones">
+            <div class="caja1-extensiones ext uno">
+              <img src="./images/logo-chrome.svg" />
+              <h4 class="titulo-chrome">Add to chrome</h4>
+              <p class="parrafo-chrome">Minimun version 6.2</p>
+              <img class="puntos" src="./images/bg-dots.svg" />
+              <button class="boton-chrome">Add % Install Extension</button>
+            </div>
+
+            <div class="caja2-extensiones ext dos">
+              <img src="./images/logo-firefox.svg" />
+              <h4 class="titulo-chrome">Add to Firefox</h4>
+              <p class="parrafo-chrome">Minimun version 5.5</p>
+              <img class="puntos" src="./images/bg-dots.svg" />
+              <button class="boton-chrome">Add % Install Extension</button>
+            </div>
+            <div class="caja2-extensiones ext tres">
+              <img src="./images/logo-opera.svg" />
+              <h4 class="titulo-chrome">Add to Opera</h4>
+              <p class="parrafo-chrome">Minimun version 4.6</p>
+              <img class="puntos" src="./images/bg-dots.svg" />
+              <button class="boton-chrome">Add % Install Extension</button>
+            </div>
+          </div>
+        </div>
+      </secion>
+      <style>
+        .preguntas-frecuentes {
+          margin-top: 8em;
+          display: flex;
+          flex-direction: column;
+        }
+        .titulo-preguntas {
+          text-align: center;
+          color: #242a45;
+          font-size: 32px;
+        }
+        .parrafo-preguntas {
+          color: grey;
+          text-align: center;
+          margin-top: -1.5em;
+        }
+        .preguntas {
+          width: 50%;
+          margin: 0 auto;
+          margin-top: 4em;
+        }
+        .preguntauno {
+          border-bottom: 1px solid grey;
+          padding: 1em;
+          border-radius: 10px;
+        }
+        .preguntauno:hover {
+          color: #fa5959;
+          cursor: pointer;
+        }
+        .respuestauno {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 1s ease-in-out;
+        }
+        .info {
+          margin: 0 auto;
+        }
+      </style>
+      <section class="preguntas-frecuentes">
+        <div class="contenido-preguntas">
+          <h4 class="titulo-preguntas">Frequently Asked Questions</h4>
+          <p class="parrafo-preguntas">
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+        </div>
+        <div class="preguntas">
+          <div class="cajapreguntauno">
+            <p class="preguntauno">How can i request a new browser?</p>
+            <p class="respuestauno">
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+            </p>
+          </div>
+          <div class="cajapreguntauno">
+            <p class="preguntauno">What is a Bookmark</p>
+            <p class="respuestauno">
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+            </p>
+          </div>
+          <div class="cajapreguntauno">
+            <p class="preguntauno">Is there a mobile app?</p>
+            <p class="respuestauno">
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+            </p>
+          </div>
+          <div class="cajapreguntauno">
+            <p class="preguntauno">What about other Chromium browsers?</p>
+            <p class="respuestauno">
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+            </p>
+          </div>
+        </div>
+        <button class="boton1 info">More Info</button>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const preguntas = document.querySelectorAll(".cajapreguntauno");
+
+        preguntas.forEach(function (pregunta) {
+          pregunta.addEventListener("click", function () {
+            const respuesta = this.querySelector(".respuestauno");
+            // Verifica si la respuesta ya está visible.
+            if (
+              respuesta.style.maxHeight &&
+              respuesta.style.maxHeight !== "0px"
+            ) {
+              respuesta.style.maxHeight = "0px"; // Esconde la respuesta
+            } else {
+              // Asegura que todas las otras respuestas estén escondidas
+              document
+                .querySelectorAll(".respuestauno")
+                .forEach(function (otherRespuesta) {
+                  otherRespuesta.style.maxHeight = "0px";
+                });
+              // Muestra la respuesta seleccionada
+              respuesta.style.maxHeight = respuesta.scrollHeight + "px";
+            }
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const seleccion = document.querySelectorAll(".seleccion");
+        const contenidos = document.querySelectorAll(".contenidosoverflow");
+
+        seleccion.forEach((tab, index) => {
+          tab.addEventListener("click", function () {
+            // Remover 'active' de todas las pestañas y contenido
+            seleccion.forEach((tab) => tab.classList.remove("active"));
+            contenidos.forEach((contenido) =>
+              contenido.classList.remove("active")
+            );
+
+            // Agregar 'active' a la pestaña y contenido clickeados
+            tab.classList.add("active");
+            contenidos[index].classList.add("active");
+          });
+        });
+      });
+      document
+        .querySelector(".hamburguesa")
+        .addEventListener("click", function () {
+          var responsiveNav = document.querySelector(".responsive");
+          if (responsiveNav.style.display === "flex") {
+            responsiveNav.style.display = "none";
+          } else {
+            responsiveNav.style.display = "flex";
+          }
+        });
+      document.querySelector(".cerrar").addEventListener("click", function () {
+        document.querySelector(".responsive").style.display = "none";
+      });
+    </script>
+  </body>
+</html>
